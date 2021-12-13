@@ -1,0 +1,39 @@
+<form>
+<fieldset>
+<legend>Sign Up</legend>
+    <table>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" placeholder="Enter Email" required ngModel #email="ngModel"></td>
+        </tr>
+
+       <div *ngIf="email.invalid&&email.touched">Email is invalid</div>
+
+        <tr>
+            <td>Password</td>
+            <td><input type="password" placeholder="Enter Password"  ngModel #pwd="ngModel" required></td>
+        </tr>
+        <div *ngIf="pwd.invalid&&pwd.touched">
+           <!-- <div *ngIf="pwd.errors?.required">Password is mandatory</div>-->
+        </div>
+
+        <tr>
+            <td>Gender</td>
+            <td><select>
+                <option>Male</option>
+                <option>Female</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td><input type="text" placeholder="Enter Country"></td>
+        </tr>
+        <tr>
+            <td>Code</td>
+            <td><input type="text" placeholder="Enter Code"></td>
+        </tr>
+
+    </table>
+    <button>Register</button>
+</fieldset>
+</form>

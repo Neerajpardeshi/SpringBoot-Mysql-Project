@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+    </thead>
+    <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.price | currency:'INR'}}</td> <!--pipe-->
+
+        <!--priceupdater as child of inventory-->
+        <!--now we want price of inventory in child-->
+        <!--use custom property binding-->
+        <!--this will establish p to c communication-->
+
+        <td><app-price-updater [priceValue]="product.price" (update)="setPrice($event,product.id)"></app-price-updater></td> 
+        <!--here we have captured the event update-->
+    </tr>
+</table>
