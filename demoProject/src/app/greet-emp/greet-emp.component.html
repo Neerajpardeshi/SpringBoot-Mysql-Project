@@ -1,0 +1,26 @@
+<table border="1">
+    <thead>
+        <th>Employee Id</th>
+        <th>Emailid</th>
+        <th>firstname</th>
+        <th>lastname</th>
+        <th>dob</th>
+        <th>city</th>
+        <th>doj</th>
+        <th>Delete Record</th>
+        <th>Update Record</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emps of emps">
+            <td>{{emps.empid}}</td>
+            <td>{{emps.emailId}}</td>
+            <td>{{emps.firstname}}</td>
+            <td>{{emps.lastname}}</td>
+            <td>{{emps.dob}}</td>
+            <td>{{emps.city}}</td>
+            <td>{{emps.doj}}</td>
+            <td><input type="button" value="Delete" (click)="deleteEmployee(emps.empid)"></td>
+            <td><input type="button" value="Update" (click)="updateEmployee(emps)"></td>
+        </tr>
+    </tbody>
+</table>

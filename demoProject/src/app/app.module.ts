@@ -16,6 +16,10 @@ import { CartComponent } from './cart/cart.component';
 import { UserComponent } from './user/user.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { RegisterComponent } from './register/register.component';
+import { GreetEmpComponent } from './greet-emp/greet-emp.component';
+import { SearchComponent } from './search/search.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { RegistrationComponent } from './registration/registration.component';
     CartComponent,
     UserComponent,
     UserdetailsComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    RegisterComponent,
+    GreetEmpComponent,
+    SearchComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
